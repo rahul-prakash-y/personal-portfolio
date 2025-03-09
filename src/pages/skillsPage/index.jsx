@@ -102,9 +102,9 @@ export const SkillsPage = () => {
 
   ]
   return (
-    <div className='flex items-center h-full flex-col mt-10 '>
-      <p className='text-xl xl:text-2xl font-poppins text-white'>Skills</p>
-      <div className='grid 2xl:grid-cols-4 gap-3 md:grid-cols-3 max-sm:grid-cols-2 3xl:grid-cols-5 w-full mx-auto'>
+    <div className='flex items-center h-full flex-col mt-10 mx-auto w-4/5'>
+      <p className='text-xl xl:text-2xl font-poppins text-white 2xl:text-5xl'>Skills</p>
+      <div className='grid 2xl:grid-cols-4 gap-10 md:grid-cols-3 max-sm:grid-cols-2 3xl:grid-cols-5 w-full mx-auto mt-5'>
         {skillDatas?.map((skill)=>{
           return(
             <div key={skill?.id} onClick={()=>window?.open(skill?.link)} className='xl:h-[300px] xl:w-[300px] lg:h-[250px] lg:w-[250px] max-sm:h-[100px] max-sm:w-[100px] relative cursor-pointer w-fit'>

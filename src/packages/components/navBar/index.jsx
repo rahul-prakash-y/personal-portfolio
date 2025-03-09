@@ -40,7 +40,7 @@ export const NavBar = ({onChange = ()=> false}) => {
         setSelectedNav(Number(localStorage.getItem('tab'))+1)
     },[selectedNav])
   return (
-    <div className='w-[99dvw]'>
+    <div className='w-screen'>
       <div className='pt-5 flex items-center justify-between w-4/5 mx-auto '>
         <p className='font-poppins text-red-400 text-2xl font-semibold xl:text-3xl'>Rahul</p>
         <div className='lg:flex max-lg:hidden items-center gap-x-14'>
