@@ -1,10 +1,10 @@
 
 import './App.css'
-import { AppRouter } from './router'
+import { LayoutPage } from './layout'
 
 function App() {
 
-  return <AppRouter />
+  return <LayoutPage/>
 }
 
 export default App
