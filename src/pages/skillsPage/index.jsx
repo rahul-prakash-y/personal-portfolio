@@ -110,7 +110,6 @@ export const SkillsPage = () => {
             <div key={skill?.id} onClick={()=>window?.open(skill?.link)} className='xl:h-[300px] xl:w-[300px] lg:h-[250px] lg:w-[250px] max-sm:h-[100px] max-sm:w-[100px] relative cursor-pointer'>
               <CircularProgress
               value={skill?.value}
-              className='h-full w-full'
               classNames={{
                 svg:"h-full w-full",
                 track:"stroke-white",
