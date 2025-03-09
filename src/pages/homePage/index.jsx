@@ -22,10 +22,10 @@ export const HomePage = () => {
     },
   ]
   return (
-    <div className='text-white'>
-      <div className='flex max-sm:flex-col'>
-        <img src="/vegeta2.png" alt="" className='h-[600px] max-sm:mx-auto xl:h-[900px]'/>
-        <div className='flex flex-col items-start justify-center gap-y-3 max-sm:px-3 max-sm:pb-3 pr-3 xl:pr-10 xl:gap-y-6'>
+    <div className='text-white w-fit'>
+      <div className='flex max-sm:flex-col items-center'>
+        <img src="/vegeta2.png" alt="" className='h-[600px] max-sm:mx-auto xl:h-[700px]'/>
+        <div className='flex flex-col items-start justify-center gap-y-3 max-sm:px-3 max-sm:pb-3 pr-3 xl:pr-0 xl:gap-y-6 w-fit'>
           <p className='text-5xl font-poppins xl:text-7xl'>Hey, I'm Rahul</p>
           <p className='font-poppins xl:text-2xl'>A passionate frontend developer diving into backend development with Node.js and Express.js to become a full-stack engineer. I specialize in crafting dynamic, responsive, and high-performance web applications with Next.js and am currently learning how to build scalable backend systems.</p>
           <div className='mt-3 flex items-center gap-x-4 text-red-400 max-sm:mx-auto'>

@@ -1,12 +1,19 @@
 import { NavBar } from '@core/ui'
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { PortfolioPage } from '../screens'
 export const LayoutPage = () => {
+  const [tab,setTab] = React.useState(()=>{
+    return localStorage.getItem('tab') || 0
+  })
+
+  React.useEffect(()=>{
+    localStorage.setItem('tab',tab)
+  },[tab])
   return (
-    <div className='w-screen min-h-screen bg-black'>
-      <NavBar />
-      <div>
-        <Outlet/>
+    <div className='min-h-screen bg-black w-fit'>
+      <NavBar onChange={(id)=>setTab(id-1)}/>
+      <div className=''>
+        <PortfolioPage tab={tab}/>
       </div>
     </div>
   )
