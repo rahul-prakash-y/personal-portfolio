@@ -1,8 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { MenuIcon } from '../../../../public/menuIcon'
 
-export const NavBar = () => {
+export const NavBar = ({onChange = ()=> false}) => {
     const navSections = [
             {
                 id:1,
@@ -32,17 +31,17 @@ export const NavBar = () => {
         ]
     const [selectedNav,setSelectedNav] = React.useState(1)
     const [isOpen,SetIsOpen] = React.useState(false)
-    const navigate = useNavigate();
-
-    function handleNavChange(id,route) {
+    function handleNavChange(id) {
         setSelectedNav(id)
-        navigate(route)
+        onChange(id)
         SetIsOpen(false)
     }
+    React.useEffect(()=>{
+        setSelectedNav(Number(localStorage.getItem('tab'))+1)
+    },[selectedNav])
   return (
-    <div>
-      <header>
-      <div className='pt-5 flex items-center justify-between w-4/5 mx-auto'>
+    <div className='w-[99dvw]'>
+      <div className='pt-5 flex items-center justify-between w-4/5 mx-auto '>
         <p className='font-poppins text-red-400 text-2xl font-semibold xl:text-3xl'>Rahul</p>
         <div className='lg:flex max-lg:hidden items-center gap-x-14'>
             {navSections?.map((nav)=>{
@@ -75,7 +74,6 @@ export const NavBar = () => {
             </div>
         :''}
       </div>
-      </header>
     </div>
   )
 }
