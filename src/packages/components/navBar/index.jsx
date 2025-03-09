@@ -28,11 +28,6 @@ export const NavBar = ({onChange = ()=> false}) => {
                 navHead:"Contact",
                 route:"/contact"
             },
-            {
-                id:6,
-                navHead:"Contact",
-                route:"/contact"
-            },
         ]
     const [selectedNav,setSelectedNav] = React.useState(1)
     const [isOpen,SetIsOpen] = React.useState(false)
